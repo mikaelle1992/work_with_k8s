@@ -1,0 +1,69 @@
+kubernetes:
+
+da onde veio->
+google °Borg
+	°omega
+	°kubernetes->
+	
+tudo no kubernetes ele é diponibilizados atraves de uma conjunto de API's
+
+tudo baseado em estado
+
+cluster: conjunto de máquinas(nodes)
+pods: unidade que contem os containers provisionados.
+o pod representa os processos rodando no cluster
+
+pode ter mais de uma containers rodando em um pod, mas é um pod por containers.
+ 
+ 
+* Instalando kind *
+
+ kinda instala o kubernetes rodando containers docker.
+ possibilita a configuração dos containers
+ 
+ para instalação importante#
+ >tem que ter 2gb de ram
+ > e pelo menos 2 core na maquina
+ 
+ é divide em 3 parte
+kubeadm
+kubelet
+kubecontron
+
+
+comandos do kind(principais):
+
+create 
+   kind create cluster-(criar um cluster)
+   kubectl cluster-info --context kind-kind(se conectar no cluster)
+   retorno do comando de conexao do cluster 
+	(Kubernetes control plane is running at https://127.0.0.1:38207
+	CoreDNS is running at https://127.0.0.1:38207/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+	To further debug and diagnose cluster problems, use 'kubectl cluster-info dump')
+
+
+
+*kind get clusters( mostrar todos os clusters)
+delete
+  kind delete clusters nome_do_kind
+  
+get
+ kubectl get nodes(trás todos os nodes do cluster)
+  status ready, quer dizer que o node está pronto para rodar
+
+
+
+kind get clusters( mostrar todos os clusters)
+
+
+Criar pasta (k8s->), criar arquivo(kind.yaml)
+criar kind apontando para o arquivo criado para criar mais de 1 node ->kind create cluster --config=k8s/kind.yaml --name=fullcycle
+
+
+
+
+
+
+
+
